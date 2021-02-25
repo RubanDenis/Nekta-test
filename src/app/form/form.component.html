@@ -1,0 +1,16 @@
+<div class="formContainer">
+    <form class="form" method="POST" (submit)='submitForm($event, emailInput.value, passwordInput.value)'>
+        <h1 class="formTitle">Вход</h1>
+
+        <input #emailInput class="formInput" type="email" placeholder="Email">
+        <input #passwordInput class="formInput" type="password" placeholder="Password">
+
+        <button class="formButton" type='submit'>Войти</button>
+
+        <div *ngIf='error' class="alertContainer">
+            <ngb-alert [dismissible]="false" type='danger'>
+                <strong>{{errorAlertText}}</strong>
+            </ngb-alert>
+        </div>
+    </form>
+</div>
